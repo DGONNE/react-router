@@ -1,8 +1,17 @@
+import { Link } from "react-router-dom";
+import { posts } from "../data/posts";
+
 const Posts = () => {
   return (
     <div>
       <h1>Lista Post</h1>
-      <p>Qui troverai tutti i nostri articoli!</p>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <Link to={`/posts/${post.id}`}>{post.title}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
