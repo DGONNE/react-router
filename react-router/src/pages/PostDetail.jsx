@@ -11,8 +11,9 @@ const PostDetail = () => {
 
   return (
     <div>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
+      <h1>{post.name}</h1>
+      <p>{post.description}</p>
+      <p>{post.price}</p>
     </div>
   );
 };
